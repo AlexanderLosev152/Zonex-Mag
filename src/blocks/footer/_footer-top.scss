@@ -1,0 +1,39 @@
+.footer {
+	&__top {
+		display: grid;
+		grid-template-columns: 1fr 1fr 646px;
+		margin-bottom: 95px;
+	}
+	&__column {
+		&:nth-child(2) {
+			margin-left: -60px;
+		}
+	}
+	&__item {
+		&:not(last-child) {
+			margin-bottom: 18px;
+		}
+	}
+	&__link {
+		font-size: 13px;
+		color: var(--color-tundora);
+		&--row {
+			font-weight: 700;
+			color: var(--color-dark);
+		}
+	}
+	&__title {
+		margin-bottom: 37px;
+		font-weight: 700;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	&__form {
+		margin: 5px 0 25px;
+	}
+	&__text {
+		font-weight: 500;
+		font-size: 13px;
+		color: var(--color-tundora);
+	}
+}

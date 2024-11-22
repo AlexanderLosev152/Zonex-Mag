@@ -1,0 +1,28 @@
+.social {
+	display: flex;
+	align-items: center;
+	gap: 29px;
+	&__item {
+
+	}
+	&__link {
+		display: block;
+		width: 16px;
+		height: 16px;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		&--tw {
+			background-image: url('../images/tw.png');
+		}
+		&--fb {
+			background-image: url('../images/fb.png');
+		}
+		&--in {
+			background-image: url('../images/in.png');
+		}
+		&--pin {
+			background-image: url('../images/pin.png');
+		}
+	}
+}

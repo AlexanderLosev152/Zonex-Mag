@@ -1,0 +1,33 @@
+.subscribe-form {
+	position: relative;
+	&__title {
+		font-size: 13px;
+		font-weight: 500;
+		color: var(--color-tundora);
+		margin-bottom: 38px;
+
+	}
+	&__btn {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		font-weight: 500;
+		font-size: 13px;
+		padding-bottom: 10px;
+	}
+	&__field {
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid var(--color-dark);
+		padding-bottom: 10px;
+		input {
+			padding-right: 80px;
+			width: 100%;
+			border: none;
+			font-size: 13px;
+			&::placeholder {
+				color: rgba(var(--color-tundora), 0.5);
+			}
+		}
+	}
+}

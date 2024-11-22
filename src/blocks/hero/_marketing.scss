@@ -1,0 +1,42 @@
+.marketing {
+	position: absolute;
+	bottom: 50px;
+	left: 40px;
+	display: flex;
+	gap: 10px;
+	width: 280px;
+	padding: 10px;
+	box-shadow: 0 5px 30px rgba(0,0,0, 0.1);
+	background: var(--color-white);
+	z-index: 1;
+	transform: translateX(-150vw);
+	transition: transform .3s;
+	&--visible {
+		transform: translateX(0);
+		transition: transform .3s;
+	}
+	span {
+		display: block;
+		font-size: 11px;
+		color: var(--color-gray);
+		padding-right: 40px;
+	}
+	&__title {
+		font-size: 15px;
+		margin: 5px 0 7px;
+		min-height: 34px;
+		padding-right: 20px;
+	}
+	&__close  {
+		position: absolute;
+		z-index: 1;
+		right: 10px;
+		top: 10px;
+		width: 10px;
+		height: 10px;
+		background-image: url('../images/close.png');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}

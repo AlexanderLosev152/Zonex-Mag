@@ -1,0 +1,16 @@
+.footer {
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #eee;
+		padding: 2.5rem 0;
+	}
+	&__list {
+		&--row {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@import "normalize.css/normalize";
+
+@import "fonts";
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "base";
+@import "media";
+@import "container";
+@import "setting";
+@import "visually-hidden";
+@import "swiper";
+
+@import "swiper/swiper-bundle.min";
+
+@import "../blocks/**/*.scss";
+
+body {
+	font-family: "Jost", serif;
+	font-weight: 500;
+	color: var(--color-dark);
+	background: var(--color-white);
+}

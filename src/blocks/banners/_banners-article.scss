@@ -1,0 +1,21 @@
+.banners-article {
+	padding: 54px 45% 0 60px;
+	min-height: 290px;
+	background-position: center ;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: var(--banner-article-color);
+	&--midseason {
+		background-image: url("../images/midseason.jpg");
+	}
+	&--summer {
+		background-image: url("../images/summer.jpg");
+	}
+	&--accs {
+		background-image: url("../images/accs.jpg");
+	}
+	&__title {
+		margin-bottom: 20px;
+		font-size: 36px;
+	}
+}

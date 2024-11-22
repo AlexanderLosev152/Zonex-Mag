@@ -1,0 +1,45 @@
+.hero {
+	position: relative;
+	height: min(700px,100svh);
+	//height: 100vh;
+	//min-height: 700px;
+	background: var(--quill-gray);
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: rgba(var(--color-dark),0.05);
+	}
+	&__container {
+		position: relative;
+		height: 100%;
+		//padding: 0 300px;
+	}
+	&__title {
+		font-weight: 700;
+		font-size: 4.5rem;
+		max-width: 550px;
+		margin-bottom: 40px;
+	}
+	p {
+		font-size: 1.2rem;
+	}
+	&__image {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		max-height: 90% ;
+	}
+	 &__content {
+		 display: flex;
+		 flex-direction: column;
+		 align-items: flex-start;
+		 justify-content: center;
+		 width: min(1220px,100%);
+		 margin-inline: auto;
+		 height: 100%;
+	 }
+}
