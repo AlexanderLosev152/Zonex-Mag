@@ -1,15 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   @@include('../blocks/head/head.html', {"title": "Главная страница"})
-<body>
-  @@include('../blocks/header/header-catalog.html')
-  <main>
-    @@include('../blocks/hero/hero-catalog.html')
-  </main>
-  @@include('../blocks/footer/footer.html')
+  <body>
+    @@include('../blocks/header/header-catalog.html')
+    <main>
+      @@include('../blocks/hero/hero-catalog.html')
+      <secton class="catalog">
+        <h2 class="visually-hidden">Catalog</h2>
+        @@include('../blocks/catalog/breadcrumbs.html')
+        <div class="catalog-content">
+          @@include('../blocks/catalog/catalog-filter.html')
+          @@include('../blocks/catalog/catalog-grid.html')
+        </div>
+      </secton>
+    </main>
+    @@include('../blocks/footer/footer.html')
 
-<!--  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/main.min.js"></script>
-</body>
+    <!--  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>-->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
 </html>

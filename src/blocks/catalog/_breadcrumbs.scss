@@ -1,0 +1,26 @@
+.breadcrumbs {
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 35px;
+		padding: 36px 0 28px;
+		border-bottom: 1px solid var(--color-dark);
+	}
+	&__item {
+		position: relative;
+		&:not(:last-child)::after{
+			content: '/';
+			position: absolute;
+			right: -22px;
+			top: 0;
+		}
+	}
+	&__link {
+		font-size: 10px;
+		text-transform: uppercase;
+		color: var(--color-gray);
+		&--current {
+			color: var(--color-dark);
+		}
+	}
+}
