@@ -40,39 +40,67 @@ const data = [
   },
 ];
 
-const closeMarketing = () => {
-  marketing.classList.remove('marketing--visible');
-};
+if (marketing) {
+  // если такой элемент есть на странице , то код работает
+  const closeMarketing = () => {
+    marketing.classList.remove('marketing--visible');
+  };
 
-const changeMarketing = () => {
-  marketing.classList.add('marketing--visible');
-};
-
-const changeMarketingData = () => {
-  marketing.classList.remove('marketing--visible');
-  setTimeout(() => {
+  const changeMarketing = () => {
     marketing.classList.add('marketing--visible');
-  }, delay - 1000);
+  };
 
-  const stringTitle = `${data[counter].title}`;
-  const stringWhere = `${data[counter].where}`;
+  const changeMarketingData = () => {
+    marketing.classList.remove('marketing--visible');
+    setTimeout(() => {
+      marketing.classList.add('marketing--visible');
+    }, delay - 1000);
 
-  marketingTitle.textContent = stringTitle;
-  marketingWhenFrom.textContent = stringWhere;
+    const stringTitle = `${data[counter].title}`;
+    const stringWhere = `${data[counter].where}`;
 
-  counter++;
+    marketingTitle.textContent = stringTitle;
+    marketingWhenFrom.textContent = stringWhere;
 
-  if (counter === data.length) {
-    counter = 0;
-  }
-};
+    counter++;
 
-setInterval(changeMarketingData, delay + delay);
+    if (counter === data.length) {
+      counter = 0;
+    }
+  };
 
-marketing.addEventListener('click', event => {
-  if (event.target.classList.contains('marketing__close')) {
-    closeMarketing();
-  }
-});
+  setInterval(changeMarketingData, delay + delay);
 
-setTimeout(changeMarketing, delay);
+  marketing.addEventListener('click', event => {
+    if (event.target.classList.contains('marketing__close')) {
+      closeMarketing();
+    }
+  });
+
+  setTimeout(changeMarketing, delay);
+}
+
+// -------------------------------------------------------
+
+// catalog filter
+
+const catalogFiltersTop = document.querySelectorAll('.catalog-filter__top');
+const catalogFilters = document.querySelectorAll('.catalog-filter');
+const catalogFilterToggle = document.querySelector('.catalog-filter__toggle');
+const hideFilters = document.querySelector('.hide-filters');
+
+if (catalogFiltersTop) {
+  catalogFiltersTop.forEach(el => {
+    el.addEventListener('click', e => {
+      e.currentTarget
+        .closest('.catalog-filter')
+        .classList.toggle('catalog-filter--open');
+    });
+  });
+
+  hideFilters.addEventListener('click', e => {
+    catalogFilters.forEach(el => {
+      el.classList.remove('catalog-filter--open');
+    });
+  });
+}

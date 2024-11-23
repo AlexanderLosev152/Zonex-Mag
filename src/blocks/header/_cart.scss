@@ -14,14 +14,5 @@
 	&__quantity {
 		position: absolute;
 		top: 0;
-		display: inline-flex;
-		align-items: center;
-		border-radius: 25px;
-		padding: 0 5px;
-		height: 1rem;
-		font-weight: 700;
-		font-size: 10px;
-		color: var(--color-white);
-		background: var(--color-dark);
 	}
 }
