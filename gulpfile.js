@@ -32,14 +32,14 @@ const paths = {
     styles: "src/styles/*.scss",
   },
   dest: {
-    html: "build/",
+    html: "docs/",
     styles: "build/css/",
   },
 };
 
 // clean output folder
 function clean() {
-  return deleteAsync("build/");
+  return deleteAsync("docs/");
 }
 
 // html
@@ -85,7 +85,7 @@ function styles() {
 function copyVendors() {
   return gulp
     .src(["node_modules/swiper/swiper-bundle.min.js"])
-    .pipe(gulp.dest("build/js/"));
+    .pipe(gulp.dest("docs/js/"));
 }
 
 // scripts
@@ -94,30 +94,30 @@ function script() {
     .src("src/js/*.js")
     .pipe(terser())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("build/js/"));
+    .pipe(gulp.dest("docs/js/"));
 }
 
 // images
 function images() {
   return gulp
     .src("src/images/**/*", { encoding: false })
-    .pipe(changed("build/assets/images/"))
+    .pipe(changed("docs/images/"))
     .pipe(imagemin({ verbose: true }))
-    .pipe(gulp.dest("build/images/"));
+    .pipe(gulp.dest("docs/images/"));
 }
 
 // fonts
 function fonts() {
   return gulp
     .src("src/fonts/*.woff2", { encoding: false })
-    .pipe(gulp.dest("build/fonts/"));
+    .pipe(gulp.dest("docs/fonts/"));
 }
 
 // server
 function runServer(done) {
   bs.init({
     server: {
-      baseDir: "build",
+      baseDir: "docs",
       index: "index.html",
     },
     port: 8080,
