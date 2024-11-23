@@ -33,7 +33,7 @@ const paths = {
   },
   dest: {
     html: "docs/",
-    styles: "build/css/",
+    styles: "docs/css/",
   },
 };
 
