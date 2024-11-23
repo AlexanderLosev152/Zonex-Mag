@@ -2,13 +2,17 @@
 
 // swiper
 
-const swiper = new Swiper('.banner-slider', {
+const bannerSlider = new Swiper('.banner-slider', {
   loop: true,
   pagination: {
     el: '.banner-pagination',
     type: 'bullets',
     clickable: true,
   },
+});
+
+const catalogSlider = new Swiper('.catalog-slider', {
+  loop: true,
 });
 
 // -------------------------------------------------------

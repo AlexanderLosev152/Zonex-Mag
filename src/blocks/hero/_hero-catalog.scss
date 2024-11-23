@@ -1,0 +1,14 @@
+.hero-catalog {
+	padding-top: 130px;
+	&__slider {
+		overflow: hidden;
+		width: 100%;
+		background: #f8f8f8;
+	}
+	p {
+		font-size: 15px;
+		line-height: 28px;
+		color: var(--color-tundora);
+		max-width: 390px;
+	}
+}
