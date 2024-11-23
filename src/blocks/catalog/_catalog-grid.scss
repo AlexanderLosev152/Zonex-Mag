@@ -1,0 +1,6 @@
+.catalog-grid {
+	margin-top: 34px;
+	&__content {
+		@include grid(250px,80px 2%);
+	}
+}

@@ -1,0 +1,25 @@
+.catalog-choice {
+	display: flex;
+	gap: .8rem;
+	margin-bottom: 2.5rem;
+	display: none;
+	&__item {
+		border-radius: 12px;
+		padding: 5px 27px;
+		font-size: 13px;
+		color: var(--color-tundora);
+		background: #eee;
+		transition: background-color .3s , color .3s;
+		display: inline-flex;
+		gap: 10px;
+		&:hover {
+			color: var(--color-white);
+			background-color: var(--color-dark);
+		}
+		img  {
+			padding: 2px;
+			background: #eee;
+			border-radius: 50%;
+		}
+	}
+}

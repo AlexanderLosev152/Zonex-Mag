@@ -1,0 +1,25 @@
+.catalog-columns {
+	display: flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 10px;
+	text-transform: uppercase;
+	&__text {
+		margin-right: 8px;
+	}
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: 8px ;
+	}
+}
+button.catalog-columns__btn {
+	font-size: 10px;
+	color: var(--color-gray);
+	&:hover {
+		color: var(--color-dark);
+	}
+	&--current {
+		color: var(--color-dark);
+	}
+}
